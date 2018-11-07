@@ -46,7 +46,12 @@ for hour_rate in company_raises: # (6)
     else :
         hour_rate = hour_rate * 1.02 #  All other salary ranges should get a standard 2% raise to the current rate.
       
-     
+randomBool = True
+date = 22
+month = 11
+day = "Thursday"
+if((date == 22) and (month == 11) and (day == "Thursday") and (randomBool == True)):
+    print("This is Thanksgiving Day!") 
         
 
 
