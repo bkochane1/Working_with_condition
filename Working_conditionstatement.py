@@ -9,10 +9,10 @@ employees = [1121, "Jackie Grainger", 22.22,
  "Jackie Grainger", 1121, 22.22, False,
  22.65, 1152, "David Toma"]
 
-name = []  # 
+name = []  # (1) create the list
 number = []
 hourly = []
-for employee in employees: # sort based upon a type of data
+for employee in employees: # (2) sort based upon a type of data
     if(type(employee) == int): 
         number.append(employee)
     elif (type(employee) == str):
@@ -25,26 +25,28 @@ for hour in total_hourly_rates:     # mulitply each hour by 1.3
     hour = hour * 1.3
 
 
-max_hourly = max(total_hourly_rates) # find max salary ( 4)
+max_hourly = max(total_hourly_rates) # (4) find max salary 
 if max_hourly > 37.30:
     print("This rate is budgetary concern.") # print warning message
 
 
-underpaid_salaries = [] # 5  create a list
+underpaid_salaries = [] # (5)  create a list
 for total_hourly_rate in total_hourly_rates: #  loop through total hourly rate list
     if (total_hourly_rate >= 28.15) and (total_hourly_rate <= 30.65) : # check the salary if is under or above
         underpaid_salaries.append(total_hourly_rate) # check the salaries and the ones that meet condition put in undepaid
 
-company_raises = hourly[:] # 6 copied of original hourly list
-for hour_rate in company_raises: # 6
+company_raises = hourly[:] # (6) copied of original hourly list
+for hour_rate in company_raises: # (6)
     if (hour_rate > 22) and (hour_rate < 24) :
         hour_rate = hour_rate * 1.05 # if houur rate is within the range mulitply by 5 %
     elif (hour_rate > 24) and (hour_rate < 26) :
         hour_rate = hour_rate * 1.04 # if hour rate is within the range mulitply by 4 % raise
     elif (hour_rate > 26) and (hour_rate < 28) :
-        hour_rate = hour_rate * 1.03 # if houur rate is within the range mulitply by 3 % raise
+        hour_rate = hour_rate * 1.03 # if hour rate is within the range mulitply by 3 % raise
     else :
         hour_rate = hour_rate * 1.02 #  All other salary ranges should get a standard 2% raise to the current rate.
+      
+     
         
 
 
